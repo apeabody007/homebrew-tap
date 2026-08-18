@@ -7,7 +7,6 @@ class Redline < Formula
   head "https://github.com/apeabody007/redline.git", branch: "main"
 
   depends_on arch: :arm64
-  depends_on :macos
   depends_on macos: :sonoma
 
   def install
