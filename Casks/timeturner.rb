@@ -1,6 +1,6 @@
 cask "timeturner" do
-  version "1.7"
-  sha256 "3854aaab45aa7219950c941d45fe3f8e18c870bcf08742fb0d598950a9d34180"
+  version "1.8"
+  sha256 "49ad1aabd26ec38a607b5625f95d1579d2bf9117b60d1339a4b062c818969691"
 
   url "https://github.com/apeabody007/timeturner/releases/download/v#{version}/TimeTurner.dmg"
   name "TimeTurner"
