@@ -1,27 +1,21 @@
 cask "redline" do
   version "1.1"
-  sha256 "535e1cf8e16186a8aefb8b28c5baab25a101a681a0aeddd2b62df17a66e1c157"
+  sha256 "7f1bc92705b6d4db8823d6a3970ded7a8ca3f70fd50237089d4de2def47e7831"
 
-  url "https://github.com/apeabody007/redline/releases/download/v#{version}/Redline-#{version}.dmg"
+  url "https://github.com/apeabody007/redline/releases/download/v#{version}/Redline.dmg"
   name "Redline"
-  desc "Floating CPU, GPU, memory and die temperature readout with a throttle warning"
+  desc "Floating vitals pill for Apple Silicon Macs"
   homepage "https://github.com/apeabody007/redline"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
   app "Redline.app"
 
-  # The same executable also answers --once, --sensors and --help, so it is
-  # worth having on PATH rather than buried in the bundle.
-  binary "#{appdir}/Redline.app/Contents/MacOS/Redline", target: "redline"
-
-  zap trash: [
-    "~/Library/Preferences/dev.aaronpeabody.redline.plist",
-  ]
-
-  caveats <<~EOS
-    Redline is a menu bar app with no dock icon. Launch it from Applications,
-    then turn on Launch at Login from its menu bar item.
-  EOS
+  zap trash: "~/Library/Preferences/dev.aaronpeabody.redline.plist"
 end

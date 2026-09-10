@@ -1,16 +1,27 @@
-# apeabody007/tap
+# homebrew-tap
 
-Homebrew casks and formulae for my tools.
+Homebrew casks for [Aaron Peabody](https://aaronpeabody.dev)'s Mac apps. Every
+app here ships as a dmg signed and notarized by Apple, so nothing is compiled on
+your machine and nothing trips Gatekeeper.
+
+## Redline
+
+A floating vitals pill for Apple Silicon Macs: CPU, GPU, memory, die
+temperature, and a warning the moment macOS reports thermal pressure.
+[Source and screenshots](https://github.com/apeabody007/redline).
 
 ```
 brew install --cask apeabody007/tap/redline
 ```
 
-## redline
+Requires macOS 14 or later on Apple Silicon. If you already installed Redline by
+hand, either drag the old copy to the trash first or add `--force`, since
+Homebrew will not overwrite an app it did not put there.
 
-A floating CPU, GPU, memory and die temperature readout for Apple Silicon
-Macs, with a warning when macOS starts thermal throttling.
-[Source and screenshots.](https://github.com/apeabody007/redline)
+To update, uninstall, or remove it along with its preferences:
 
-Installs the signed and notarized build straight into `/Applications`, and puts
-`redline` on your PATH for `--once` and `--sensors`.
+```
+brew upgrade --cask apeabody007/tap/redline
+brew uninstall --cask apeabody007/tap/redline
+brew uninstall --zap --cask apeabody007/tap/redline
+```
