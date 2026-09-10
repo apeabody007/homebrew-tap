@@ -11,8 +11,13 @@ temperature, and a warning the moment macOS reports thermal pressure.
 [Source and screenshots](https://github.com/apeabody007/redline).
 
 ```
+brew trust apeabody007/tap
 brew install --cask apeabody007/tap/redline
 ```
+
+Homebrew 6 refuses to load a cask from a tap you have not trusted, which is what
+the first line is for. If you are on an older Homebrew that has no `brew trust`,
+skip it and run the install on its own.
 
 Requires macOS 14 or later on Apple Silicon. If you already installed Redline by
 hand, either drag the old copy to the trash first or add `--force`, since
