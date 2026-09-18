@@ -1,6 +1,6 @@
 cask "redline" do
-  version "1.4"
-  sha256 "30470b057bf671ee5bd202df852d9f444feb694d1417c5002c5d01d6e149f638"
+  version "1.5"
+  sha256 "fc7ba4f25fef16908188f5f1325073b11156c1d519353a1a05a4db3cd9ce2b2d"
 
   url "https://github.com/apeabody007/redline/releases/download/v#{version}/Redline.dmg"
   name "Redline"
